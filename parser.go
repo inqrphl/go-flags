@@ -607,7 +607,7 @@ func (p *Parser) parseLong(s *parseState, name string, argument *string) error {
 		return p.parseOption(s, name, option, canarg, argument)
 	}
 
-	return newErrorf(ErrUnknownFlag, "unknown flag `%s'", name)
+	return newErrorf(ErrUnknownFlag, "unknown flag `%s`", name)
 }
 
 func (p *Parser) splitShortConcatArg(s *parseState, optname string) (string, *string) {
